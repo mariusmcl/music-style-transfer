@@ -5,9 +5,9 @@
 Deep learning models trained on visual data have changed the field of computer vision and is now finding more and more ways into consumer products and business applications.
 
 Humans however are heavily dependent on audio data to navigate their lives, and being able to create powerful models for raw audio data has numerous applications ranging from the arts to new business opportunities. 
-In this work we expand upon recent architectural advances (*Aaron van den Oord et. al.: WaveNet: A Generative Model for Raw Audio (2016)* ) and propose a WaveNet-like autoencoder with a shared encoder and multiple decoders to perform style transfer between multiple musical instruments.
+In this work we expand upon recent architectural advances (*Aaron van den Oord et. al.: WaveNet: A Generative Model for Raw Audio (2016)* ) and propose a WaveNet-like autoencoder with a shared encoder and multiple decoders to perform style transfer between multiple musical instruments. In addition, we explore this models' potential of producing automatic composition of music, by reducing the latent space used in the network. 
 
-Our method consists in training multiple decoders, one for each domain, together with a shared encoder. In order to enforce a disentangled latent representation, a domain classifier is trained to classify the latent representations' domain.
+Our method consists in training multiple decoders, one for each domain, together with a shared encoder. In order to enforce a disentangled latent representation, a domain classifier is trained to classify the latent representations' domain. Also, the audio input is augmented to further enforce the encoder to encode in a high-level, semantic way.
 
 The architecture is heavily inspired by *Noem Mor et al.: A Universal Music Translation Network (2018)* ([repo](https://github.com/facebookresearch/music-translation)).
 
